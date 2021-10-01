@@ -25,6 +25,13 @@ dotenv.config();
 const app=express();
 const port=process.env.PORT || 3000;
 
+//body parser config 
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+ 
+// parse application/json
+app.use(bodyParser.json())
+
 
 //middlewares
 app.use(express.json());
