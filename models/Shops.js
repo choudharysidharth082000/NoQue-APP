@@ -22,16 +22,29 @@ const canteens = new Schema(
             min: 10,
             max:10
         },
-        
-        password: 
+        userID:
         {
             type: String,
-            required : true,
-            min: 8
-        },
-        items: Array,
-        price: Array,
-        Image: Array
+            required: true
+        } ,       
+       
+        items:
+        [
+            {
+                name:
+                {
+                    type: String
+                },
+                price:
+                {
+                    type: String
+                },
+                image:
+                {
+                    type: String
+                }
+            }
+        ]
         
 
     },{timestamps: true}

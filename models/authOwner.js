@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const {Schema} = mongoose;
 
-const Admins = new Schema(
+const Owners = new Schema(
     {
         userName: {
             required: true,
@@ -34,6 +34,6 @@ const Admins = new Schema(
     },{timestamps: true}
 )
 
-const Admin = mongoose.model("Admin", Admins);
+const Owner = mongoose.model("owner", Owners);
 
-exports.Admin = Admin;
+exports.Owner = Owner;
