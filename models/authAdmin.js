@@ -2,41 +2,38 @@ const mongoose = require('mongoose');
 
 const {Schema} = mongoose;
 
-const canteens = new Schema(
+const Admins = new Schema(
     {
-        shopName: {
+        userName: {
             required: true,
             type: String,
             min:3
-        },       
+        },
+        
         email: 
         {
             required: true,
             type: String,
             min: 8
         },
-        mobileNumber: 
-        {
-            required: true,
-            type: String,
-            min: 10,
-            max:10
-        },
-        
+       
         password: 
         {
             type: String,
             required : true,
             min: 8
         },
-        items: Array,
-        price: Array,
-        Image: Array
-        
+       
+        salt : {
+            type: String,
+            required: true,
+            
+
+        }
 
     },{timestamps: true}
 )
 
-const canteen = mongoose.model("canteen", canteens);
+const Admin = mongoose.model("Admin", Admins);
 
-exports.canteen = canteen;
+exports.Admin = Admin;

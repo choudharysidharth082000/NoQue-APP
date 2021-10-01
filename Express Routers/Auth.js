@@ -3,7 +3,7 @@ const router = express.Router();
 const canteen = require('../models/Shops');
 
 
-router.get('/', async (req, res)=>
+router.get('/login', async (req, res)=>
 {
     try {
         const user = await canteen.find();

@@ -41,7 +41,7 @@ app.use(cors());
 const db = process.env.DB;
 console.log(db);
 
-app.use('/local', mainRoute);
+app.use('/v1/auth', mainRoute);
 
 
 //Database Stuff
